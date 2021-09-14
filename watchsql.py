@@ -19,7 +19,7 @@ def hash(filename: str) -> str:
 def exec(database: str, filename: str) -> None:
     os.system(f"psql {database} -c '\i {filename}'")
 
-def mon(database: str, filename: str, reload: int) -> None:
+def mon(database: str, filename: str, reload: int=2) -> None:
     previous_hash = hash(filename)
 
     while True:
