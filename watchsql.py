@@ -41,5 +41,5 @@ if __name__ == '__main__':
     parser.add_argument("-f", "--file", type=str)
     parser.add_argument("-r", "--reload", type=int)
     args = parser.parse_args()
-
-    mon(args.database, args.file, args.reload)
+    
+    mon(args.database, args.file, 2 if args.reload is None else args.reload)
