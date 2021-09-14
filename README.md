@@ -1,4 +1,4 @@
-## SQL FILE MONITOR
+## SQL FILE MONITOR FOR POSTGRESQL
 
 ```
 usage: watchsql.py [-h] [-d DATABASE] [-f FILE] [-r RELOAD]
