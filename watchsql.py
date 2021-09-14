@@ -16,10 +16,8 @@ def hash(filename: str) -> str:
 
     return h.hexdigest()
 
-
 def exec(database: str, filename: str) -> None:
     os.system(f"psql {database} -c '\i {filename}'")
-
 
 def mon(database: str, filename: str, reload: int) -> None:
     previous_hash = hash(filename)
@@ -34,6 +32,7 @@ def mon(database: str, filename: str, reload: int) -> None:
 
         time.sleep(reload)
 
+        
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--database", type=str)
