@@ -5,7 +5,7 @@ import argparse
 import time
 
 
-def hash(filename: str):
+def hash(filename: str) -> str:
     h = hashlib.sha256()
     b = bytearray(128*1024)
     mv = memoryview(b)
@@ -41,6 +41,4 @@ if __name__ == '__main__':
     parser.add_argument("-r", "--reload", type=int)
     args = parser.parse_args()
 
-
     mon(args.database, args.file, args.reload)
-
